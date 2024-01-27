@@ -2,8 +2,8 @@ import React from 'react'
 // import trash from "../trash.svg"
 import {ReactComponent as TrashIcon} from '../trash.svg';
 import { useCart, useDispatchCart } from '../components/ContextReducer';
-require('dotenv').config();
-const url = REACT_APP_SERVER_URL;
+// require('dotenv').config();
+const url = process.env.REACT_APP_SERVER_URL;
 export default function Cart() {
     let data=useCart();
     let dispatch=useDispatchCart();

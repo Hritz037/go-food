@@ -3,13 +3,17 @@ import Navbar from '../components/Navbar.js'
 import Footer from '../components/Footer.js'
 import Card from '../components/Card.js'
 // import Carousel from "../components/Carousel.js"
+
+const url = process.env.REACT_APP_SERVER_URL;
+
 export default function Home() {
     const [search,setSearch]=useState("")
     const [foodCat,setFoodCat]=useState([])
     const [foodItem,setFoodItem]=useState([])
 
     const loadData=async ()=>{
-        let response=await fetch("http://localhost:5000/api/foodData",{
+        try{
+        let response=await fetch(`{url}/api/foodData`,{
             method:"POST",
             headers:{
                 'Content-Type':'application/json'
@@ -19,6 +23,9 @@ export default function Home() {
         // console.log(response[0],response[1])
         setFoodItem(response[0])
         setFoodCat(response[1])
+    }catch(error){
+        console.log(error)
+    }
     }
     useEffect(()=>{
         loadData()

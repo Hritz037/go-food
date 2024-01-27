@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar';
-require('dotenv').config();
-const url = REACT_APP_SERVER_URL;
+// require('dotenv').config();
+const url = process.env.REACT_APP_SERVER_URL;
 
 export default function Signup() {
     const navigate=useNavigate();
