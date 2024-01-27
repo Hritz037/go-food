@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar';
+require('dotenv').config();
+const url = REACT_APP_SERVER_URL;
 
 export default function Signup() {
     const navigate=useNavigate();
@@ -23,7 +25,7 @@ export default function Signup() {
         // console.log(latlong)
         let [lat, long] = latlong
         console.log(lat, long)
-        const response = await fetch("http://localhost:5000/api/getlocation", {
+        const response = await fetch(`{url}/api/getlocation`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

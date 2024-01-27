@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+require('dotenv').config();
+const url = REACT_APP_SERVER_URL;
+
 
 export default function MyOrder() {
     const [orderData, setOrderData] = new useState([]);
     const fetchMyOrders = async () => {
-        await fetch("http://localhost:5000/api/myOrdersData", {
+        await fetch(`{url}/api/myOrdersData`, {
             method: "POST",
             headers: {
                 'Content-Type': "application/json"
