@@ -8,7 +8,7 @@ const url = process.env.REACT_APP_SERVER_URL;
 export default function MyOrder() {
     const [orderData, setOrderData] = new useState([]);
     const fetchMyOrders = async () => {
-        await fetch(`{url}/api/myOrdersData`, {
+        await fetch(`${url}:5000/api/myOrdersData`, {
             method: "POST",
             headers: {
                 'Content-Type': "application/json"

@@ -13,14 +13,15 @@ export default function Home() {
 
     const loadData=async ()=>{
         try{
-        let response=await fetch(`{url}/api/foodData`,{
+        let response=await fetch(`${url}:5000/api/foodData`,{
             method:"POST",
             headers:{
                 'Content-Type':'application/json'
             }
         });
+        // console.log(`${url}/api/foodData`)
         response=await response.json();
-        console.log("Responses",response[0],response[1])
+        // console.log("Responses",response[0],response[1])
         setFoodItem(response[0])
         setFoodCat(response[1])
     }catch(error){

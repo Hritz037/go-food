@@ -25,7 +25,7 @@ export default function Signup() {
         // console.log(latlong)
         let [lat, long] = latlong
         console.log(lat, long)
-        const response = await fetch(`{url}/api/getlocation`, {
+        const response = await fetch(`${url}/api/getlocation`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ export default function Signup() {
     const handleSubmit = async (e) => {
         // console.log({ name: credentials.name, email: credentials.email, password: credentials.password, location: credentials.geolocation });
         e.preventDefault();
-        const response = await fetch("http://localhost:5000/api/createuser", {
+        const response = await fetch("${url}:5000/api/createuser", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -56,7 +56,7 @@ export default function Signup() {
             alert("Enter Valid Credentials")
         }
         else{
-            const response = await fetch("http://localhost:5000/api/loginuser", {
+            const response = await fetch("${url}:5000/api/loginuser", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
