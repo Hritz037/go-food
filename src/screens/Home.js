@@ -20,11 +20,11 @@ export default function Home() {
             }
         });
         response=await response.json();
-        // console.log(response[0],response[1])
+        console.log("Responses",response[0],response[1])
         setFoodItem(response[0])
         setFoodCat(response[1])
     }catch(error){
-        console.log(error)
+        console.log("Home error",error)
     }
     }
     useEffect(()=>{
