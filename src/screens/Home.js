@@ -20,6 +20,11 @@ export default function Home() {
             }
         });
         // console.log(`${url}/api/foodData`)
+        if(!response.ok){
+            throw new Error("Server responded with a non-200 status")
+        }
+        console.log(response)
+       
         response=await response.json();
         // console.log("Responses",response[0],response[1])
         setFoodItem(response[0])
