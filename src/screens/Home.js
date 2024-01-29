@@ -13,7 +13,7 @@ export default function Home() {
 
     const loadData=async ()=>{
         try{
-        let response=await fetch(`${url}:5000/api/foodData`,{
+        let response=await fetch(`${url}/api/foodData`,{
             method:"POST",
             headers:{
                 'Content-Type':'application/json'

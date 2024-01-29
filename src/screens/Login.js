@@ -10,7 +10,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     // console.log({ email: credentials.email, password: credentials.password });
     e.preventDefault();
-    const response = await fetch(`${url}:5000/api/loginuser`, {
+    const response = await fetch(`${url}/api/loginuser`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
