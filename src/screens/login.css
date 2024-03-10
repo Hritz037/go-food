@@ -3,7 +3,9 @@
     width:50%;
 }
 
-
+.form-label{
+  color:white !important;
+}
 @media (max-width: 1000px) { /* Medium devices */
     .formbox {
       width: 75% !important;

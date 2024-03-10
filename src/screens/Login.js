@@ -39,12 +39,12 @@ export default function Login() {
       <div className='container'>
         <form className='formbox m-auto mt-5 border bg-dark border-success rounded' onSubmit={handleSubmit}>
           <div className="m-3">
-            <label htmlFor="exampleInputEmail1" >Email address</label>
+            <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
             <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" value={credentials.email} onChange={onChange} />
             <div id="emailHelp" className="form-text ">We'll never share your email with anyone else.</div>
           </div>
           <div className="m-3">
-            <label htmlFor="exampleInputPassword1" >Password</label>
+            <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
             <input type="password" className="form-control" id="exampleInputPassword1" name="password" value={credentials.password} onChange={onChange} />
           </div>
           <button type="submit" className=" m-3 me-1 btn btn-success">Submit</button>
