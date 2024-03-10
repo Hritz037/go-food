@@ -5,7 +5,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Modal from '../Modal';
 import Cart from '../screens/Cart';
 import { useCart } from './ContextReducer';
-import "./NavBars.css"
+import "./navbar.css"
 import ShoppingCart from '@mui/icons-material/ShoppingCart';
 export default function Navbar() {
   let data = useCart();

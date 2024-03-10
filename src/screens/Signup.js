@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 import { Link,useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar';
+import "./signup.css"
 // require('dotenv').config();
+
 const url = process.env.REACT_APP_SERVER_URL;
+
 
 export default function Signup() {
     const navigate=useNavigate();
@@ -84,8 +87,8 @@ export default function Signup() {
              <div>
       <Navbar />
       </div>
-            <div className='container' >
-                <form className='w-50 pe-5 m-auto mt-5 border bg-dark border-success rounded' onSubmit={handleSubmit}>
+            <div className=' parent container d-flex p-0 justify-content-center' >
+                <form className='formbox pe-5 mx-auto border bg-dark border-success rounded' onSubmit={handleSubmit}>
                     <div className="mb-3">
                         <label htmlFor="name" className="form-label m-3 mb-0">Name</label>
                         <input type="text" className="form-control m-3 mt-2" id="name" name="name" value={credentials.name} onChange={onChange} />

@@ -1,0 +1,39 @@
+.formbox {
+    margin-top:3rem !important;
+    width:50%;
+}
+
+
+@media (max-width: 1000px) { /* Medium devices */
+    .formbox {
+      width: 75% !important;
+    }
+  }
+  @media (max-width: 500px) { /* Small devices */
+    .formbox{
+      /* margin-top:2rem !important; */
+      width: 90% !important;
+    }
+  }
+  
+  @media(max-width:438px){
+    .formbox{
+    width: 100% !important;
+    padding: 0px !important;
+    /* margin: 0px !important;
+    margin-top: 0px !important; */
+    padding-top: 1rem !important;
+    }
+    /* .parent{
+      height:100% !important;
+      padding-top: 1rem !important;
+      
+    } */
+  }
+ 
+
+  
+
+  
+  /* Add more media queries for larger sizes if needed */
+  
